@@ -62,7 +62,7 @@ exports.createUser = async (req, res) => {
       .status(200)
       .send({ message: "verification link has been sent to your mail id" });
   } catch (error) {
-    res.status(500).send(error.details[0].message);
+    res.status(500).send("verification not sent");
   }
 };
 
